@@ -34,22 +34,23 @@ $(document).ready(function(){
     
     
     <div class="slide section"> 
-     <header><h1>Intro to JavaScript</header>
+     <header><h1>Intro to JavaScript</h1></header>
+     <section class="content">
+        <p>For this group of exercises, you'll need your laptop and a browser.</p>
+        <p>Open Google Chrome (not Safari or Firefox) and then open repl.it</p>
+        <p>Also open these slides ##TODO ADD SLIDES LINK</p>
+     </section>
     </div> 
     
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>The Language of the Web</h1></header> 
-     <section class="content"> 
-     <img class="center" src="http://dl.dropbox.com/u/10998095/Screenshots/2nwgi5~b8656.png">
 
-<p>Also used for plug-in scripting (Adobe/Mozilla/Chrome), game scripting, and <a href="http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages">more</a>.
-</p> 
-     </section>
+    <div class="slide normal"> 
+    <header><h1>The Language of the Web</h1></header> 
+    <section class="content"> 
+    <img class="center" src="http://dl.dropbox.com/u/10998095/Screenshots/2nwgi5~b8656.png">
+
+        <p>Also used for plug-in scripting (Adobe/Mozilla/Chrome), game scripting, and <a href="http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages">more</a>.
+        </p> 
+    </section>
     </div>
     
    
@@ -57,27 +58,26 @@ $(document).ready(function(){
     
     
     <div class="slide normal"> 
-     <header><h1>The History of JS</h1></header> 
-     <section class="content"> 
-     <ul>
-  <img class="border" src="http://www.mozilla.org/img/press/bios/small/brendan-eich.jpg" style="float:right;">
- <li> <b>1995:</b> At Netscape, Brendan Eich created "LiveScript", which gets renamed to "JavaScript".
- <li><b>1996:</b> Microsoft releases "JScript", a port, for IE3.
- <li><b>1997:</b> JavaScript was standardized in the "ECMAScript" spec.
- <li><b>2005:</b> "AJAX" was coined, and the web 2.0 age begins.
- <li><b>2006:</b>jQuery 1.0 was released.
- <li><b>2010:</b> Node.JS was released.
- <li><b>2012:</b> ECMAScript Harmony spec nearly finalized.
-</ul>
+        <header><h1>The History of JS</h1></header> 
+        <section class="content"> 
+            <ul>
+                <img class="border" src="http://www.mozilla.org/img/press/bios/small/brendan-eich.jpg" style="float:right;">
+                <li><b>1995:</b> At Netscape, Brendan Eich created "LiveScript", which gets renamed to "JavaScript".</li>
+                <li><b>1996:</b> Microsoft releases "JScript", a port, for IE3.</li>
+                <li><b>1997:</b> JavaScript was standardized in the "ECMAScript" spec.</li>
+                <li><b>2005:</b> "AJAX" was coined, and the web 2.0 age begins.</li>
+                <li><b>2006:</b> jQuery 1.0 was released.</li>
+                <li><b>2010:</b> Node.JS was released.</li>
+                <li><b>2012:</b> ECMAScript Harmony spec nearly finalized.</li>
+            </ul>
 
-<p class="speaker-notes" style="display:none">
-Made in 10 days. Netscape + Sun marketing move to rename.
-Google Maps + GMail make it quite popular.
-http://www.oreillynet.com/pub/a/javascript/2001/04/06/js_history.html
-We’ll use parts that are solid and have been around for a long time
-</p>
-
-     </section>
+            <p class="speaker-notes" style="display:none">
+            Made in 10 days. Netscape + Sun marketing move to rename.
+            Google Maps + GMail make it quite popular.
+            http://www.oreillynet.com/pub/a/javascript/2001/04/06/js_history.html
+            We’ll use parts that are solid and have been around for a long time
+            </p>
+        </section>
     </div>
     
    
@@ -85,109 +85,115 @@ We’ll use parts that are solid and have been around for a long time
     
     
     <div class="slide normal"> 
-     <header><h1>What can JS do?</h1></header> 
-     <section class="content"> 
-    
-<ul>
- <img class="border" src="http://nandokakimoto.files.wordpress.com/2009/01/maps.gif?w=640" style="float:right">
- <li>Image switchers and <a href="http://dev.sencha.com/playpen/ext-core-latest/examples/lightbox/">lightboxes</a>
- <li>Full featured <a href="http://www.grooveshark.com">web applications</a>
- <li>Keep track of users with cookies 
- <li>Interactive elements like tabs, sliders and accordions
- <li><a href="http://raphaeljs.com/analytics.html">Drawing and animation</a>
- <li>Mind blowing awesomeness like this
-     </section>
+        <header><h1>What can JS do?</h1></header> 
+        <section class="content"> 
+            <ul>
+                <img class="border" src="http://nandokakimoto.files.wordpress.com/2009/01/maps.gif?w=640" style="float:right">
+                <li>Image switchers and <a href="http://dev.sencha.com/playpen/ext-core-latest/examples/lightbox/">lightboxes</a>
+                <li>Full featured <a href="http://www.songza.com">web applications</a>
+                <li>Keep track of users with cookies 
+                <li>Interactive elements like tabs, sliders and accordions
+                <li><a href="http://http://d3js.org/">Drawing and animation</a>
+                <li>AJAX to get data without having to refresh the page</li>
+            </ul>
+        </section>
     </div>
     
-   
-    
-    
-    
     <div class="slide normal"> 
-     <header><h1>Statements</h1></header> 
-     <section class="content"> 
-<p>Each instruction in JS is a "statement", like:</p>
-<pre>console.log('Hello World!');</pre>
-
-<p>Try it on <a href="http://repl.it">repl.it</a>:</p>
-<img src="http://dl.dropbox.com/u/10998095/Screenshots/j89bo0pzo02r.png">
-
-<p class="speaker-notes" style="display:none;">
-Each separate instruction in Javascript is called a 'statement'. A 'simple' statement represents a single instruction and ends with a semi-colon. You can think of a simple statement like a sentence - the semi-colon is like a full stop and tells Javascript that your statement is finished.
-Let's add a simple statement to our script tags and see what happens...
-</p>
-
-     </section>
-    </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Variables</h1></header> 
-     <section class="content"> 
-     <p>Use variables to store values.</p>
-<p>Declare, then initialize in 2 statements:</p>
-<pre>
+        <header><h1>Variables in JS</h1></header> 
+        <section class="content"> 
+            <p>In JS, you need to use <code>var</code> to initialize a variable.</p>
+            <p>Declare, then initialize in 2 statements:</p>
+            <pre>
 var x;
 x = 5;
 console.log(x);
-</pre>
+            </pre>
 
-<p>Or declare and initialize in one statement:</p>
-<pre>
+            <p>Or declare and initialize in one statement:</p>
+            <pre>
 var y = 2;
 console.log(y);
-</pre>
+            </pre>
 
-<p>Re-assign the value later:</p>
-<pre>
+            <p>Re-assign the value later:</p>
+            <pre>
 var x = 5;
 x = 1;
-</pre>
+            </pre>
 
-<p class="speaker-notes" style="display:none;">Variables are one of the basic building blocks of Javascript. Just like 'x' in algebra, a variable in programming is a named container for a value that can change. Variables have to be 'declared' once before being used, using the 'var' keyword and the name of the variable. A variable declaration is a simple statement, so it ends with a semi-colon.
-Assigning an initial value to a variable is called 'initialising'. You can declare and initialise in one go, or seperately.
-If its not assigned, it's undefined.
-</p>
-     </section>
+            <p class="speaker-notes" style="display:none;">Variables are one of the basic building blocks of Javascript. Just like 'x' in algebra, a variable in programming is a named container for a value that can change. Variables have to be 'declared' once before being used, using the 'var' keyword and the name of the variable. A variable declaration is a simple statement, so it ends with a semi-colon.
+            Assigning an initial value to a variable is called 'initialising'. You can declare and initialise in one go, or seperately.
+            If its not assigned, it's undefined.
+            </p>
+        </section>
     </div>
     
    
-    
-    
-    
+    <div class="slide normal">
+        <header><h1><code>console.log()</code> Instead of <code>print</code></h1></header>
+        <section class="content">
+            <p>In Python, we use <code>print</code> to output a variable to the screen. <code>console.log()</code> does the same thing.</p>
+            <pre>
+console.log("Hello!");
+console.log("Any string you pass to console.log() will print out.");
+            </pre>
+            You can also pass variables.
+            <pre>
+var s = "Remember, a string is a string whether it's passed as quotes, or as a variable that has a string 'inside'.";
+console.log(x);
+            </pre>
+        </section>
+    </div>
+
+
     <div class="slide normal"> 
-     <header><h1>Primitive Data Types</h1></header> 
-     <section class="content"> 
-     <p style="display:none;">Variables can store different "types" of data, like:</p>
-<ul>
- <li><b>string:</b> an immutable string of characters:
-<pre>var greeting = 'Hello Kitty';
-var restaurant = "Pamela's Place";
-</pre>
- <li><b>number:</b> whole (6, -102) or floating point (5.8737): 
-<pre>var myAge = 28;
+        <header><h1>Primitive Data Types</h1></header> 
+        <section class="content"> 
+            <p style="display:none;">Variables can store different "types" of data, like:</p>
+            <ul>
+                <li>
+                    <b>string:</b> an immutable string of characters:
+                    <pre>
+var greeting = 'Hello Balloonicorn';
+var restaurant = "Sugar Cafe";
+                    </pre>
+                </li>
+                <li>
+                    <b>number:</b> whole (6, -102) or floating point (5.8737): 
+                    <pre>
+var myAge = 26;
 var pi = 3.14;
-</pre>
- <li><b>boolean:</b> Represents logical values true or false:
-<pre>var catsAreBest = true;
+                    </pre>
+                </li>
+                <li>
+                    <b>boolean:</b> Represents logical values true or false:
+                    <pre>
+var catsAreBest = true;
 var dogsRule = false;
-</pre>
- <li><b>undefined:</b> Represents a value that hasn't been defined.
-<pre>var notDefinedYet;</pre>
- <li><b>null:</b> Represents an explicitly empty value.
-<pre>var goodPickupLines = null;</pre>
-</ul>
+                    </pre>
+                </li>
+                <li>
+                    <b>undefined:</b> Represents a value that hasn't been defined.
+                    <pre>
+var notDefinedYet;
+                    </pre>
+                </li>
+                <li>
+                    <b>null:</b> Represents an explicitly empty value.
+                    <pre>
+var goodPickupLines = null;
+                    </pre>
+                </li>
+            </ul>
 
-<p class="speaker-notes" style="display:none">
-Variables can be populated with any one of the 'data types' available in Javascript. These are the simple ones we'll be working with today...
-There are also data types that cater for situations where there is no value undefined and null.
-Loose typing- you don't tell JS what type of data type it is, it guesses. You can use typeof to see what it thinks.
-http://www.daaq.net/old/javascript/index.php?page=js+data+types&parent=core+javascript
-</p>
-     </section>
+            <p class="speaker-notes" style="display:none">
+                Variables can be populated with any one of the 'data types' available in Javascript. These are the simple ones we'll be working with today...
+                There are also data types that cater for situations where there is no value undefined and null.
+                Loose typing- you don't tell JS what type of data type it is, it guesses. You can use typeof to see what it thinks.
+                http://www.daaq.net/old/javascript/index.php?page=js+data+types&parent=core+javascript
+            </p>
+        </section>
     </div>
     
    
@@ -195,26 +201,26 @@ http://www.daaq.net/old/javascript/index.php?page=js+data+types&parent=core+java
     
     
     <div class="slide normal"> 
-     <header><h1>Variable Names</h1></header> 
-     <section class="content"> 
-     <ul>
- <li>Begin with letters, $ or _
- <li>Only contain letters, numbers, $ and _
- <li>Case sensitive
- <li>Avoid <a href="https://developer.mozilla.org/en/JavaScript/Reference/Reserved_Words">reserved words</a>
- <li>Choose clarity and meaning
- <li>Prefer camelCase for multipleWords (instead of under_score)
- <li>Pick a naming convention and stick with it
-</ul>
-OK:
-<pre>
+        <header><h1>Variable Names</h1></header> 
+        <section class="content"> 
+            <ul>
+                <li>Begin with letters, $ or _
+                <li>Only contain letters, numbers, $ and _
+                <li>Case sensitive
+                <li>Avoid <a href="https://developer.mozilla.org/en/JavaScript/Reference/Reserved_Words">reserved words</a>
+                <li>Choose clarity and meaning
+                <li>Prefer camelCase for multipleWords (instead of under_score)
+                <li>Pick a naming convention and stick with it
+            </ul>
+                OK:
+            <pre>
 var numPeople, $mainHeader, _num, _Num;
-</pre>
-Not OK:
-<pre>
+            </pre>
+                Not OK:
+            <pre>
 var 2coolForSchool, soHappy!
-</pre>
-     </section>
+            </pre>
+        </section>
     </div>
     
    
@@ -222,22 +228,22 @@ var 2coolForSchool, soHappy!
     
     
     <div class="slide normal"> 
-     <header><h1>Expressions</h1></header> 
-     <section class="content"> 
-     <p>Variables can also store the result of any "expression":</p>
-<pre>
+        <header><h1>Expressions</h1></header> 
+        <section class="content"> 
+            <p>Variables can also store the result of any "expression". Remember how I keep talking about expressions? It's going to get worse from here.</p>
+            <pre>
 var x = 2 + 2;
 var y = x * 3;
-</pre>
+            </pre>
 
-<pre>
-var name = 'Pamela';
+            <pre>
+var name = 'Liz';
 var greeting = 'Hello ' + name;
-var title = 'your highness';
+var title = 'dutchess of JavaScript and functional programming';
 var formalGreeting = greeting + ', ' + title;
-</pre>
+            </pre>
 
-     </section>
+        </section>
     </div>
     
    
@@ -245,58 +251,79 @@ var formalGreeting = greeting + ', ' + title;
     
     
     <div class="slide normal"> 
-     <header><h1>Loose Typing</h1></header> 
-     <section class="content"> 
-     <p>JS figures out the type based on value, and the type can change:</p>
-<pre>
+    <header><h1>Loose Typing</h1></header> 
+    <section class="content"> 
+        <p>JS tries to figure out what type you tried to use based on value, and the type can change:</p>
+        <pre>
 var x;
 x = 2;
 x = 'Hi';
-</pre>
+        </pre>
 
-<p>A variable can only be of one type:</p>
-<pre>
+        <p>A variable can only be of one type at a time, <code>y</code> starts as a number and changes to a string:</p>
+        <pre>
 var y = 2 + ' cats';
 console.log(typeof y);
-</pre>
+        </pre>
 
-<p class="speaker-notes" style="display:none">coercion</p>
+        <p class="speaker-notes" style="display:none">coercion</p>
 
 
-     </section>
+    </section>
     </div>
     
    
-    
-    
-    
     <div class="slide normal"> 
-     <h1 class="center"><a target="_blank" href="../exercises/variables.html">Exercise Time!</a></h1>
-    </div>
-    
-   
-    
-    
-    
-    <div class="slide normal"> 
-     <header><h1>Comments</h1></header> 
-     <section class="content"> 
-     <p>Comments are human-readable text ignored by the computer:</p>
-<pre>
+        <header><h1>Comments</h1></header> 
+        <section class="content"> 
+            <p>Javascript uses C-style comments.</p>
+            <pre>
 // You can write single-line comments
 var x = 4; // Or you can comment after a statement
 
 /* 
-  Or you can write multi-line comments, if you have something very long
-  to say like this gratuitously long description.
+Or you can write multi-line comments, if you have something very long
+to say like this gratuitously long description.
 */
-</pre>
+            </pre>
 
-<p class="speaker-notes" style="display:none;">
-When to use comments
-</p>
-     </section>
+            <p class="speaker-notes" style="display:none;">
+                When to use comments
+            </p>
+        </section>
     </div>
+    
+    
+    <div class="slide normal">
+     <h1 class="center"><a target="_blank" href="../exercises/variables.html">Exercise Time!</a></h1>
+    </div>
+    
+   
+    <div class="slide normal"> 
+    <header><h1>What's up with Semicolons?</h1></header> 
+    <section class="content"> 
+        <ul>
+            <li>Begin with letters, $ or _
+            <li>Only contain letters, numbers, $ and _
+            <li>Case sensitive
+            <li>Avoid <a href="https://developer.mozilla.org/en/JavaScript/Reference/Reserved_Words">reserved words</a>
+            <li>Choose clarity and meaning
+            <li>Prefer camelCase for multipleWords (instead of under_score)
+            <li>Pick a naming convention and stick with it
+        </ul>
+            OK:
+        <pre>
+var numPeople, $mainHeader, _num, _Num;
+        </pre>
+            Not OK:
+        <pre>
+var 2coolForSchool, soHappy!
+        </pre>
+    </section>
+    </div>
+    
+    
+    
     
    
     
