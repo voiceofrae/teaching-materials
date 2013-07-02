@@ -37,7 +37,7 @@ $(document).ready(function(){
      <header><h1>Intro to JavaScript</h1></header>
      <section class="content">
         <p>For this group of exercises, you'll need your laptop and a browser.</p>
-        <p>Open Google Chrome (not Safari or Firefox) and then open repl.it</p>
+        <p>Open Google Chrome (not Safari or Firefox) and then open <a href="http://repl.it">http://repl.it</a></p>
         <p>Also open these slides ##TODO ADD SLIDES LINK</p>
      </section>
     </div> 
@@ -293,42 +293,20 @@ to say like this gratuitously long description.
         </section>
     </div>
     
-    
-    <div class="slide normal">
-     <h1 class="center"><a target="_blank" href="../exercises/variables.html">Exercise Time!</a></h1>
-    </div>
-    
-   
     <div class="slide normal"> 
-    <header><h1>What's up with Semicolons?</h1></header> 
-    <section class="content"> 
-        <ul>
-            <li>Begin with letters, $ or _
-            <li>Only contain letters, numbers, $ and _
-            <li>Case sensitive
-            <li>Avoid <a href="https://developer.mozilla.org/en/JavaScript/Reference/Reserved_Words">reserved words</a>
-            <li>Choose clarity and meaning
-            <li>Prefer camelCase for multipleWords (instead of under_score)
-            <li>Pick a naming convention and stick with it
-        </ul>
-            OK:
-        <pre>
-var numPeople, $mainHeader, _num, _Num;
-        </pre>
-            Not OK:
-        <pre>
-var 2coolForSchool, soHappy!
-        </pre>
-    </section>
+        <header><h1>What's up with Semicolons?</h1></header> 
+        <section class="content"> 
+            <p>Javascript has something called "Automatic Semicolon Insertion", which means you can omit the semicolons and Javascript will try to guess what's going on.</p>
+            <p>This isn't how JS is meant to be used though, so you might get behavior you don't expect if you mix and match. Try to stay consistent.</p>
+        </section>
+    </div>
+
+
+    <div class="slide normal">
+        <h1 class="center"><a target="_blank" href="../exercises/variables.html">Exercise Time!</a></h1>
     </div>
     
-    
-    
-    
-   
-    
-    
-    
+
     <div class="slide normal"> 
      <header><h1>Functions</h1></header> 
      <section class="content"> 
@@ -360,161 +338,163 @@ Side effects.
     
     
     <div class="slide normal"> 
-     <header><h1>Beware: Circular Dependancies</h1></header> 
-     <section class="content"> 
-     <pre>
-function chicken() {
-    egg();
-}
-
-function egg() {
-    chicken();
-}
-
-egg();
-
-</pre>
-     </section>
+        <header><h1>Alternate Function Declaration Syntax</h1></header> 
+        <section class="content"> 
+            <p>Functions are really just variables that have code inside, rather than strings or numbers.</p>
+            <pre>
+var sum = function(a, b) {
+    return a + b;
+};
+            </pre>
+            <p>But really, functions are Objects, like most everything in JavaScript.</p>
+            <pre>
+var sum = new Function('a', 'b', 'return a + b');
+            </pre>
+        </section>
     </div>
+
+
     
     <div class="slide normal"> 
-     <header><h1>Arguments</h1></header> 
-     <section class="content"> 
-     <p>Functions can accept any number of named arguments:</p>
-<pre>
-function sayMyName(name) {
-  console.log('Hi, ' + name);
+        <header><h1>Arguments</h1></header> 
+        <section class="content"> 
+            In JavaScript, we have named arguments, but we can't refer to them by name during the function call.
+
+            <pre>
+function sum(arg1, arg2) {
+    return arg1 + arg2;
 }
 
-sayMyName('Pamela');
-sayMyName('Testy McTesterFace');
-</pre>
-
-<pre>
-function addNumbers(num1, num2) {
-  var result = num1 + num2;
-  console.log(result);
-}
-
-addNumbers(7, 21);
-addNumbers(3, 10);
-</pre>
-
-<p>You can also pass variables:</p>
-<pre>
-var number = 10;
-addNumbers(number, 2);
-addNumbers(number, 4);
-</pre>
-
-<p class="speaker-notes" style="display:none;">
-Arguments (sometimes called parameters) are values that are passed into a function so it can do the same processing job for different data inputs. We can name our arguments in the function definition, inside the brackets, separated by commas. We can then access them by name inside the function just like variables...
-In the function call, we insert our argument values in the brackets...
-PIRATE JOKE!!
-</pre>
-     </section>
+sum(88, 44)
+            </pre>
+        </section>
     </div>   
     
     
     
     <div class="slide normal"> 
-     <header><h1>Return Values</h1></header> 
-     <section class="content"> 
-     <p>The return keyword returns a value to whoever calls the function (and exits the function):</p>
-<pre>
-function addNumbers(num1, num2) {
-  var result = num1 + num2;
-  return result; // Anything after this line won't be executed
+        <header><h1>Return Values</h1></header> 
+        <section class="content"> 
+            <p>The return keyword returns a value to whoever calls the function (and exits the function):</p>
+            <pre>
+function sum(num1, num2) {
+    var result = num1 + num2;
+    return result; // Anything after this line won't be executed
 }
 
 var sum = addNumbers(5, 2);
-</pre>
-<p>You can use function calls in expressions:</p>
-<pre>
+            </pre>
+            <p>You can use function calls in expressions:</p>
+            <pre>
 var biggerSum = addNumbers(2, 5) + addNumbers(3, 2);
-</pre>
+            </pre>
 
-<p>You can even call functions inside function calls:</p>
-<pre>
+            <p>You can even call functions inside function calls:</p>
+            <pre>
 var hugeSum = addNumbers(addNumbers(5, 2), addNumbers(3, 7));
-</pre>
+            </pre>
 
-<p class="speaker-notes" style="display:none;">
-Functions can be used to do processing tasks, and they can also return a value to the function caller. To do this we use the 'return' keyword. 'Return' also quits the function so it must always be the last statement in your function.
-If we assign a function call to a variable, it's value will be the result of running the function, ie whatever is 'returned'. If there is no return statement the variable's value will be 'undefined'.
-</p>
-     </section>
+            <p class="speaker-notes" style="display:none;">
+            Functions can be used to do processing tasks, and they can also return a value to the function caller. To do this we use the 'return' keyword. 'Return' also quits the function so it must always be the last statement in your function.
+            If we assign a function call to a variable, it's value will be the result of running the function, ie whatever is 'returned'. If there is no return statement the variable's value will be 'undefined'.
+            </p>
+        </section>
     </div>
     
-   
-    
-    
-    
-
-    
-   
-    
-    
-    
     <div class="slide normal"> 
-     <header><h1>Variable Scope</h1></header> 
-     <section class="content"> 
-     <p>JS Variables have "function scope". They are visible in the function where they're defined:</p>
+        <header><h1>Variable Scope</h1></header> 
+        <section class="content"> 
+            <p>JS Variables have "function scope". They are visible in the function where they're defined:</p>
 
-<p>A variable with "local" scope:</p>
-<pre>
+            <p>A variable with "local" scope:</p>
+            <pre>
 function addNumbers(num1, num2) {
-  var localResult = num1 + num2;
-  console.log("The local result is: " + localResult);
+    var localResult = num1 + num2;
+    console.log("The local result is: " + localResult);
 }
 addNumbers(5, 7);
 console.log(localResult);
-</pre>
+            </pre>
 
-<p>A variable with "global" scope:</p>
-<pre>
+            <p>A variable with "global" scope:</p>
+            <pre>
 var globalResult;
 function addNumbers(num1, num2) {
-  globalResult = num1 + num2;
-  console.log("The global result is: " + globalResult);
+    globalResult = num1 + num2;
+    console.log("The global result is: " + globalResult);
 }
 addNumbers(5, 7);
 console.log(globalResult);
-</pre>
+            </pre>
 
-     </section>
+        </section>
     </div>
     
-   
+   <div class="slide normal"> 
+        <header><h1>Variable Scope (easy to break)</h1></header> 
+        <section class="content"> 
+            <p>
+                JS Variables are scoped to where they are defined. You must use <code>var</code> to scope them.
+            </p>
+
+            <p>A properly scoped variable:</p>
+            <pre>
+
+function addNumbers(num1, num2) {
+var localResult = num1 + num2;
+console.log("The local result is: " + localResult);
+}
+addNumbers(5, 7);
+console.log(localResult);
+
+            </pre>
+ 
+            <p>An improperly scoped variable:</p>
+            <pre>
+function addNumbers(num1, num2) {
+localResult = num1 + num2;
+console.log("The local result is: " + localResult);
+}
+addNumbers(5, 7);
+console.log(localResult); //our function is leaky!
+            </pre>
+
+        </section>
+    </div>
     
     
     
     <div class="slide normal"> 
-     <header><h1>Coding Conventions: Spacing</h1></header> 
-     <section class="content"> 
-     <p>Use newlines between statements and use spaces to show blocks.</p>
+        <header><h1>JS Conventions: Spacing</h1></header> 
+        <section class="content"> 
+            <p>Use newlines between statements and use spaces to show blocks.</p>
 
-<p>Bad:</p>
-<pre>
+            <p>Bad:</p>
+            <pre>
 function addNumbers(num1,num2) {return num1 + num2;}
 
 function addNumbers(num1, num2) {
 return num1 + num2;
 }
-</pre>
+            </pre>
 
-<p>Good:</p>
-<pre>
+            <p>Good:</p>
+            <pre>
 function addNumbers(num1, num2) {
-  return num1 + num2;
+    return num1 + num2;
 }
-</pre>
-     </section>
+            </pre>
+        </section>
     </div>
     
    
     
-    
+    <div class="slide normal"> 
+        <header><h1>Docs</h1></header> 
+        <section class="content"> 
+            <a href="https://developer.mozilla.org/en/JavaScript/Guide">Mozilla Developer Network</a>
+        </section>
+    </div>
     
     <div class="slide normal"> 
      <h1 class="center"><a target="_blank" href="../exercises/functions.html">Exercise Time!</a></h1>
@@ -524,15 +504,7 @@ function addNumbers(num1, num2) {
     
     
     
-    <div class="slide normal"> 
-     <header><h1>Getting Help</h1></header> 
-     <section class="content"> 
-     <p>Google for questions or check <a href="https://developer.mozilla.org/en/JavaScript/Guide">Mozilla Developer Network</a> and <a href="http://www.w3schools.com/js/default.asp">W3Schools</a>.</p>
 
-<p>Post problematic code on <a href="http://jsfiddle.net/">JSFiddle</a> and share the link.</p>
-    <img class="fill" src="http://davidwalsh.name/dw-content/jsfiddle.jpg">
-     </section>
-    </div>
     
    
    </div>
