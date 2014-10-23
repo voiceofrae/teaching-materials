@@ -36,12 +36,40 @@
         <li style="font-size:xx-large">This text is far too large. Fix it using the CSS menu in the elements pane to un-check the box.</li>
         <li>Using the elements pane, add an image that floats to the right of this list.</li>
       </ol>
+      <h2>The Network Tab</h2>
+      <ol>
+        <li>Open <a href="http://coursera.org" target="_blank">coursera.org</a> and open your Dev Tools. Navigate to the network tab.</li>
+        <li>
+
       <h2>The JS Console</h2>
       <ol>
-        <li>Open the JS console by clicking on the "Console" tab.
+        <li>Open the JS console by clicking on the "Console" tab.</li>
+        <li>Try typing the following and exploring the contents of each object:
+          <ul>
+            <li><code>window</code></li>
+            <li><code>document</code></li>
+            <li><code>console</code></li>
+            <li><code>chrome</code></li>
+          </ul>
+        </li>
+
+        <h2>The Debugger</h2>
+        <li>Open <a href="exercises/laundry_timer.html" target="blank">The Laundry Timer.</a></li>
+        <li>Take a look at the bugs on the laundry timer. These problems need to be fixed, let's walk through the first one using the Debugger</li>
+        <li>Open Dev Tools, and navigate to the Sources tab, on the laundry timer page. You should see on the left-hand side, a pane with a list of files. Click on laundry_timer.html.</li>
+        <li>Scroll down to line 68, the first line of the event listener for the "New Washer Load" button. Click directly on the line number to add a breakpoint.</li>
+        <li>Enter some numbers, then click the "New Washer Load" button. You'll notice that the page is now grey and the javascript has stopped running.</li>
+        <li>Pay special attention to the right-hand side of the Dev Tools window. Click on the "Step Into" button (arrow pointing down) and watch as the local scope window fills up with all of the variables we see being defined. We can see their values.</li>
+        <li>Now, add a breakpoint to the dryer button's event handler.</li>
+        <li>Do you see any difference between the variables we saw in the washer, and the ones we saw in the dryer? </li>
+        <li>Can you see what is happening differently between the washer and dryer code?</li>
+
+        <li>Use the debugger to find the rest of the bugs, and then modify the original file (outside of Dev Tools) to fix them</li>
+        <li><strong>HINT:</strong> Set a watch expression on line 115, for the expression <code>counterTDs[i].innerHTML.split(":")[1]</code></li>
+
 
     
-      <h2>The Network Tab</h2>
+      
 
   </body>
 </html>

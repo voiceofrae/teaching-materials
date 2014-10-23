@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<!-- saved from url=(0078)file:///Users/icyfenix/Projects/Hackbright/Curriculum/Javascript2/laundry.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Bootstrap 101 Template</title>
+    <title>Laundry Timer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
@@ -19,10 +18,12 @@
     <p>Oh no, we've got BUGS in our laundry! Good thing we have a debugger- otherwise we'd never get our clothes clean. Use the debugger, together with the console, to figure out what problem with Scope is causing these bugs. Couldn't hurt to make this bug tracker a little prettier too, check out the CSS while you're at it.</p>
     <div class="well">
         <h4>Bugs in Laundry Timer:</h4>
-        <input type="checkbox">Sometimes seconds are not taken away from every item<br>
-        <input type="checkbox">Dryer does not add to table, but washer does<br>
-        <h4>TODO in Laundry Timer</h4>
-        <input type="checkbox">Seconds don't stop at 00, and minuites are never decremented.
+        <ol>
+            <li><input type="checkbox"> Dryer rows seem like they're unstyled, and look different than the washer rows.</li>
+            <li><input type="checkbox"> Seconds don't stop at "00".</li>
+            <li><input type="checkbox"> Minuites are never decremented.</li>
+            <li><input type="checkbox"> Sometimes seconds are not decremented from every item in the list.</li>
+        </ol>
     </div>
     <div class="form">
     Washer Time: <input type="number" id="washer_time"> <button id="new_washer">New Washer Load</button>
