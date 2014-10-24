@@ -73,7 +73,12 @@
 
 
     
-      
+  <script type="text/javascript">
+    var newListItem = document.createElement('li');
+    newListItem.innerHTML = 'There is an important difference between the <strong>Elements</strong> pane in Dev Tools and the <strong>View Source</strong> option. View Source is the original document as presented from the server. Elements is the current DOM as rendered. Try to find this line with View Source. You will see what we mean.'
+    document.querySelectorAll('ol')[1].appendChild(newListItem);
+
+  </script>      
 
   </body>
 </html>
