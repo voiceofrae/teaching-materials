@@ -63,7 +63,7 @@
     var dryer = document.getElementById('new_dryer');
     
 
-    washer.addEventListener('click', function(){
+    washer.addEventListener('click', function(e){
         var table = document.getElementsByTagName('tbody')[0];
         var row = document.createElement('tr');
         var type = document.createElement('td');
@@ -85,7 +85,7 @@
 
     });
 
-    dryer.addEventListener('click', function(){
+    dryer.addEventListener('click', function(e){
         var row = document.createElement('tr');
         var type = document.createElement('td');
         var timer = document.createElement('td');
