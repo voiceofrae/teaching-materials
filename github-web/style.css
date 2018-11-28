@@ -1,0 +1,34 @@
+.present p,
+.present li {
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.present p,
+.present ul,
+.present ol {
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.present ul,
+.present ol {
+  padding-left: 2em;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.present code {
+  background-color: #ddd;
+  padding: 0.1em 0.2em;
+  border-radius: 3px;
+}

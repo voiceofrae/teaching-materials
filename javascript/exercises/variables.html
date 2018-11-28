@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="../../common/css/bootstrap.css" rel="stylesheet">
-  </head>
+    <link href="../../common/css/bootstrap.min.css" rel="stylesheet">  </head>
  <body>
 <div class="container">
 <h2>Exercises: Variables</h2>
@@ -23,29 +22,29 @@
 <pre id="solution1" style="display:none;">
 var numKids  = 5;
 var partner  = 'David Beckham';
-var location = 'Costa Rica';
+var geoLocation = 'Costa Rica';
 var jobTitle = 'web developer';
 
-var future = 'You will be a ' + jobTitle + ' in ' + location + ', and married to ' +
+var future = 'You will be a ' + jobTitle + ' in ' + geoLocation + ', and married to ' +
    partner + ' ' + ' with ' + numKids + ' kids.';
 console.log(future);</pre>
 
  <h3 class="page-header">The Age Calculator</h3>
 
-<p><em>Forgot how old someone is? Calculate it!</em></p>
+<p><em>Want to find out how old you'll be? Calculate it!</em></p>
  <ul>
-  <li>Store the current year in a variable.
-  <li>Store their birth year in a variable.
-  <li>Calculate their 2 possible ages based on the stored values.
-  <li>Output them to the screen like so: "They are either NN or NN", substituting the values.
+  <li>Store your birth year in a variable.
+  <li>Store a future year in a variable.
+  <li>Calculate your 2 possible ages for that year based on the stored values.<br>For example, if you were born in 1988, then in 2026 you'll be either 37 or 38, depending on what month it is in 2026.
+  <li>Output them to the screen like so: "I will be either NN or NN in YYYY", substituting the values.
  </ul>
  <button  onclick="showSolution(2)" class="btn">See Solution</button>
  <br><br>
  <pre id="solution2" style="display:none;">
-var year = 1984;
-var now  = 2012;
-var age  = now - year;
-console.log('They are either ' + age + ' or ' + (age - 1));</pre>
+var birthYear = 1984;
+var futureYear  = 2012;
+var age  = futureYear - birthYear;
+console.log('I will be either ' + age + ' or ' + (age - 1));</pre>
 
 <h3 class="page-header">The Lifetime Supply Calculator</h3>
 
